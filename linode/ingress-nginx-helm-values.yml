@@ -1,0 +1,11 @@
+--- 
+controller: 
+  # Make ngnix to the default ingress controller 
+  ingressClassResource: 
+    default: true
+
+  # Ensure ngnix also supports ingress configurations without explicit class configurations
+  watchIngressWithoutClass: true
+
+  service: 
+    type: LoadBalancer

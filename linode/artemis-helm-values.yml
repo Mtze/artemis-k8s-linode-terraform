@@ -1,0 +1,16 @@
+application: 
+  userManagement: 
+    internalAdmin: 
+      username: "artemis_admin"
+      password: "example_password"
+
+  registry: 
+    jwt: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+
+artemis: 
+  volumes: 
+    size: 10Gi
+
+database: 
+  volumes: 
+    size: 10Gi
