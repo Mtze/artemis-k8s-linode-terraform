@@ -1,0 +1,8 @@
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: artemis-ingress-gc
+  namespace: artemis
+spec:
+  domains:
+    - artemis2.mtze.me # FIXME

@@ -1,0 +1,27 @@
+artemisVersion: "5.7.3"
+application: 
+  userManagement: 
+    internalAdmin: 
+      username: "artemis_admin"
+      password: "example_password"
+
+  registry: 
+    jwt: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+
+artemis: 
+  volumes: 
+    storageClassName: "standard-rwx"
+  
+  service: 
+    type: NodePort
+
+  ingress: 
+    annotations: 
+      kubernetes.io/ingress.class: "gce"
+      networking.gke.io/managed-certificates: artemis-ingress-gc
+    hosts: 
+      - host: artemis2.mtze.me #FIXME
+        paths: 
+        - path: "/*"
+          pathType: ImplementationSpecific
+
